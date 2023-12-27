@@ -1,0 +1,68 @@
+body {
+    background-color: hsl(220, 15%, 55%);
+    min-height: 100vh;
+    margin: 0;
+    /* Allows items within this container to be flex items - meaning we can apply flex styles */
+    display: flex;
+    /* Aligns items along the main axis (horizontally) */
+    justify-content: center;
+    /* Aligns items along the cross axis (vertically) */
+    align-items: center;
+}
+
+
+.MainComponent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 250px;
+
+    /* Adding the border  */
+    border: solid;
+    border-width: 10px;
+    border-color: white;
+    padding: 8px;
+    background-color: white;
+    border-radius: 15px;
+
+}
+.qrImage img{
+    width: 250px;
+    border-radius: 15px;
+
+}
+
+.text {
+    padding-top: 0px;
+}
+.text h3 {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0;
+    padding: 15px;
+    text-align: center;
+    padding-bottom: 0px;
+}
+.text p {
+    font-size: 15px;
+    padding: 10px;
+    padding-top: 0px;
+    text-align: center;
+}
+
+/* Making the QR code bigger for smaller screens */
+@media only screen and (max-width: 600px) {
+    .qrImage img{
+        width: 400px;
+    }
+    .MainComponent {
+        width: 400px;
+    }
+    .text h3 {
+        font-size: 30px;
+    }
+    .text p {
+        font-size: 25px;
+    }
+}
